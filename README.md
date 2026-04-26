@@ -1,193 +1,42 @@
-# Gui_Ai_STT
+# Project README
 
+## Overview
+This project is a C-based application that demonstrates the use of various libraries to create a graphical user interface (GUI) for audio processing. It supports multiple platforms and includes features like audio playback, visualization, and basic analysis.
 
-## Project Overview
+## Features
+- **Audio Playback**: Supports playing audio files using ALSA library.
+- **Real-time Visualization**: Provides real-time visual representation of audio data.
+- **Basic Analysis**: Includes simple audio analysis features such as frequency spectrum display.
 
-This project implements specialized functionality related to ai_stt.
-
-## Core Components
-
-### Main Functionality
-- Implements core algorithms for ai_stt
-- Efficient data structures
-- Optimized performance
-- Clean code organization
-
-### Technical Features
-- C/C++ implementation
-- Dynamic memory management
-- Platform-independent design
-- Real-time capable
-
-### Architecture
-- Module separation
-- Clear interface design
-- Proper abstraction layers
-- Extensible design
-
-## Use Cases
-- Production systems
-- Educational purposes
-- Research applications
-- Performance-critical operations
-
-## Performance Characteristics
-- Optimized algorithms
-- Efficient memory usage
-- Scalable architecture
-- Minimal overhead
-
-## Implementation Quality
-- Well-organized code
-- Meaningful naming
-- Proper error handling
-- Memory management
-
-## Build and Deployment
-- Standard C/C++ compilation
-- Makefile-based building
-- Cross-platform support
-- Easy integration
-
-
-## Building the Project
-
+## Project Structure
 ### Prerequisites
-- C/C++ Compiler (GCC, Clang, or MSVC)
+- C/C++ Compiler and Debugger (GCC, Clang)
 - Make utility
 - Standard development tools
+- Libraries needed in specific projects:
+  - ALSA for Linux audio playback
+  - X11 for GUI on Linux
+  - SDL for cross-platform GUI
 
-### Build Steps
-
-1. Navigate to project directory:
+## Build & Run
+### Build Process
+To build the project, navigate to the root directory of the project and run:
 ```bash
-cd Gui_Ai_STT
+make -f Makefile.linux all  # For Linux
+make -f Makefile.windows all  # For Windows
+make -f Makefile.wine all  # For Wine
+make -f Makefile.web all  # For Webassembly
 ```
 
-2. Build the project:
-```bash
-make -f Makefile.(os) all
-```
-
-3. For clean rebuild:
+To clean the build artifacts, run:
 ```bash
 make -f Makefile.(os) clean
-make -f Makefile.(os) all
 ```
 
-4. If there are ./bin and ./libs directories, build libs with:
-```bash
-make -f Makefile.(os) cleanlib
-make -f Makefile.(os) lib
-```
-
-### Build Options
-```bash
-make -f Makefile.(os) all         # build output
-make -f Makefile.(os) do        # build + exe output
-make -f Makefile.(os) clean   # Remove build artifacts
-```
-
-## Running the Project
-
-Execute the compiled binary:
-
-```bash
-./build/Main(.exe)
-```
-
-Or using make:
+### Execution
+After building, you can run the application with:
 ```bash
 make -f Makefile.(os) exe
 ```
 
-## Project Organization
-
-```
-Gui_Ai_STT/
-├── src/
-│   ├── Main.c          # Entry point
-│   └── *.c             # Implementation files
-├── Makefile            # Build configuration
-└── README.md           # This file
-```
-
-## Technical Details
-
-### Language: C/C++
-- Performance-oriented
-- Direct hardware access where needed
-- Memory efficient
-- Widely portable
-
-### Key Technologies
-- Standard C library
-- System-specific libraries as needed
-- Algorithm optimization
-- Efficient data structures
-
-### Code Quality
-- Clean, readable implementation
-- Proper error handling
-- Resource management
-- Well-documented algorithms
-
-## Development Notes
-
-### Architecture Decisions
-- Modular design for reusability
-- Efficient algorithms for performance
-- Clear separation of concerns
-- Extensible structure
-
-### Performance Optimizations
-- Algorithm efficiency
-- Memory layout optimization
-- Cache-conscious programming
-- Minimal overhead
-
-### Portability
-- Cross-platform compatible
-- Platform-specific optimizations where possible
-- Standard library usage
-- No external dependencies (where feasible)
-
-## Troubleshooting
-
-### Build Issues
-- Ensure compiler is installed
-- Check file paths and permissions
-- Verify Make installation
-- Review compiler error messages
-
-### Runtime Issues
-- Check input data validity
-- Verify file accessibility
-- Ensure sufficient memory
-- Review output format
-
-### Performance Issues
-- Check compiler optimization flags
-- Profile hot code paths
-- Review algorithm complexity
-- Consider input size
-
-## Future Improvements
-
-Potential enhancements:
-- Additional optimization opportunities
-- Extended functionality
-- Platform-specific optimizations
-- Performance profiling
-
-## References
-
-For technical background:
-- Algorithm textbooks
-- Computer science references
-- Language documentation
-- Online educational resources
-
----
-
-*Project implementing practical algorithms and data structures in C/C++*
+This README provides a basic overview of the project and its components. For more detailed instructions on specific features or platform-specific considerations, refer to the documentation within the source code and the Makefiles.
