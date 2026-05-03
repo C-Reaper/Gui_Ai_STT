@@ -17,7 +17,6 @@
 #define AUDIO_SAMPLE_RATE           44100
 #define AUDIO_CHANNELS              1
 #define AUDIO_BITS_PER_SAMPLE       16
-#define AUDIO_FORMAT                SND_PCM_FORMAT_S16_LE
 #define AUDIO_DURATION_SECONDS      5
 #define AUDIO_FRAMES_PER_BUFFER     1024
 #define AUDIO_WORD_ROT              0
@@ -105,7 +104,7 @@ void Setup(AlxWindow* w){
     //OAudio_Free(&a);
 
     memset(created,0,sizeof(created));
-    micro = IAudio_New(AUDIO_FORMAT,AUDIO_BITS_PER_SAMPLE,AUDIO_FRAMES_PER_BUFFER,AUDIO_CHANNELS,AUDIO_SAMPLE_RATE,500000);
+    micro = IAudio_New(AUDIO_BITS_PER_SAMPLE,AUDIO_FRAMES_PER_BUFFER,AUDIO_CHANNELS,AUDIO_SAMPLE_RATE,500000);
     //IAudio_Write(&a,NULL);
 }
 void Update(AlxWindow* w){
